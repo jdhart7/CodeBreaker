@@ -1,0 +1,35 @@
+body {
+            margin: 0;
+			font-family: arial;
+        }
+		.options {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 1px;
+			color: red;
+		}
+		.symbols {
+			width: 6vw;
+			height: 6vw;
+			border-radius: 100%;
+			background-color: green;
+			margin: 3px;
+			display: inline-block;
+			color: green;
+		}
+		.clue {
+			width: 3vw;
+			height:3vw;
+			display: inline-block;
+			border: thin solid grey;
+		}
+		.gameSpace {
+			max-width: 100%;
+			margin: 3px;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
