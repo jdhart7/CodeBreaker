@@ -22,18 +22,18 @@ function changeColor(obj) {		//changes the color of the clicked circle in the pl
 	
 	switch (innerText) {							//moves the circle's color to the next color.
 		case 0:										//0 represents green. The next color is blue, so if the inner text is 0, change the color of the circle to blue.
-			obj.style.backgroundColor = '#84DFC1';
-			obj.style.color = '#84DFC1';
+			obj.style.backgroundColor = '#6FC6F7';
+			obj.style.color = '#6FC6F7';
 			obj.textContent = 1;
 			break;
 		case 1:
-			obj.style.backgroundColor = 'red';		//same thing. Change the blue circle to red.
-			obj.style.color = 'red';
+			obj.style.backgroundColor = '#ED6B7F';		//same thing. Change the blue circle to red.
+			obj.style.color = '#ED6B7F';
 			obj.textContent = 2;
 			break;
 		case 2:
-			obj.style.backgroundColor = 'yellow';	//and so on
-			obj.style.color = 'yellow';
+			obj.style.backgroundColor = '#FADD5F';	//and so on
+			obj.style.color = '#FADD5F';
 			obj.textContent = 3;
 			break;
 		case 3:
@@ -42,13 +42,13 @@ function changeColor(obj) {		//changes the color of the clicked circle in the pl
 			obj.textContent = 4;
 			break;
 		case 4:
-			obj.style.backgroundColor = 'purple';
-			obj.style.color = 'purple';
+			obj.style.backgroundColor = '#C866F2';
+			obj.style.color = '#C866F2';
 			obj.textContent = 5;				//you also have to change the number inside the circle so, if it's clicked again, the program knows what color it is.
 			break;
 		case 5:
-			obj.style.backgroundColor = 'green';
-			obj.style.color = 'green';
+			obj.style.backgroundColor = '#67E06F';
+			obj.style.color = '#67E06F';
 			obj.textContent = 0;
 			break;
 	}		
@@ -58,85 +58,85 @@ function alterCPU() {			//changes the grey circles at the top of the screen to s
 	
 	switch (arr[0]) {			//switch statement finds the value for the color in the first entry.
 		case 0:
-			document.getElementById("ans1").style.backgroundColor = "green";	//0 in the array represents green
+			document.getElementById("ans1").style.backgroundColor = "#67E06F";	//0 in the array represents green
 			break;
 		case 1:
-			document.getElementById("ans1").style.backgroundColor = "#84DFC1";	//1 represents blue
+			document.getElementById("ans1").style.backgroundColor = "#6FC6F7";	//1 represents blue
 			break;
 		case 2:
-			document.getElementById("ans1").style.backgroundColor = "red";		//and so on
+			document.getElementById("ans1").style.backgroundColor = "#ED6B7F";		//and so on
 			break;
 		case 3:
-			document.getElementById("ans1").style.backgroundColor = "yellow";	//and so forth.
+			document.getElementById("ans1").style.backgroundColor = "#FADD5F";	//and so forth.
 			break;
 		case 4:
 			document.getElementById("ans1").style.backgroundColor = "black";	//ans1 is the first grey circle in the play area, of course.
 			break;
 		case 5:
-			document.getElementById("ans1").style.backgroundColor = "purple";
+			document.getElementById("ans1").style.backgroundColor = "#C866F2";
 			break;
 	}
 	
 	switch (arr[1]) {
 		case 0:
-			document.getElementById("ans2").style.backgroundColor = "green";	//does the same thing as the first switch statement, but for the second circle.
+			document.getElementById("ans2").style.backgroundColor = "#67E06F";	//does the same thing as the first switch statement, but for the second circle.
 			break;
 		case 1:
-			document.getElementById("ans2").style.backgroundColor = "#84DFC1";
+			document.getElementById("ans2").style.backgroundColor = "#6FC6F7";
 			break;
 		case 2:
-			document.getElementById("ans2").style.backgroundColor = "red";
+			document.getElementById("ans2").style.backgroundColor = "#ED6B7F";
 			break;
 		case 3:
-			document.getElementById("ans2").style.backgroundColor = "yellow";
+			document.getElementById("ans2").style.backgroundColor = "#FADD5F";
 			break;
 		case 4:
 			document.getElementById("ans2").style.backgroundColor = "black";
 			break;
 		case 5:
-			document.getElementById("ans2").style.backgroundColor = "purple";
+			document.getElementById("ans2").style.backgroundColor = "#C866F2";
 			break;
 	}
 	
 	switch (arr[2]) {
 		case 0:
-			document.getElementById("ans3").style.backgroundColor = "green";	//I'm sure there's an easier way to do this, but I couldn't figure it out.
+			document.getElementById("ans3").style.backgroundColor = "#67E06F";	//I'm sure there's an easier way to do this, but I couldn't figure it out.
 			break;
 		case 1:
-			document.getElementById("ans3").style.backgroundColor = "#84DFC1";
+			document.getElementById("ans3").style.backgroundColor = "#6FC6F7";
 			break;
 		case 2:
-			document.getElementById("ans3").style.backgroundColor = "red";
+			document.getElementById("ans3").style.backgroundColor = "#ED6B7F";
 			break;
 		case 3:
-			document.getElementById("ans3").style.backgroundColor = "yellow";
+			document.getElementById("ans3").style.backgroundColor = "#FADD5F";
 			break;
 		case 4:
 			document.getElementById("ans3").style.backgroundColor = "black";
 			break;
 		case 5:
-			document.getElementById("ans3").style.backgroundColor = "purple";
+			document.getElementById("ans3").style.backgroundColor = "#C866F2";
 			break;
 	}
 	
 	switch (arr[3]) {
 		case 0:
-			document.getElementById("ans4").style.backgroundColor = "green";		//one more time.
+			document.getElementById("ans4").style.backgroundColor = "#67E06F";		//one more time.
 			break;
 		case 1:
-			document.getElementById("ans4").style.backgroundColor = "#84DFC1";
+			document.getElementById("ans4").style.backgroundColor = "#6FC6F7";
 			break;
 		case 2:
-			document.getElementById("ans4").style.backgroundColor = "red";
+			document.getElementById("ans4").style.backgroundColor = "#ED6B7F";
 			break;
 		case 3:
-			document.getElementById("ans4").style.backgroundColor = "yellow";
+			document.getElementById("ans4").style.backgroundColor = "#FADD5F";
 			break;
 		case 4:
 			document.getElementById("ans4").style.backgroundColor = "black";
 			break;
 		case 5:
-			document.getElementById("ans4").style.backgroundColor = "purple";
+			document.getElementById("ans4").style.backgroundColor = "#C866F2";
 			break;
 	}
 	
@@ -182,22 +182,22 @@ function printGuess(plArr, black, white) {
 	for (i = 0; i < 4; i++) {							//for loop adds a new circle to the string for each element in the player's array.
 		switch (plArr[i]) {			//like above, 0 = green, 1 = blue, etc.
 			case 0:
-				newCircles += "<div style = 'height: 6vw; width: 6vw; border-radius: 100%; background-color: green; margin: 3px; display: inline-block;'></div>";
+				newCircles += "<div style = 'height: 6vw; width: 6vw; border-radius: 100%; background-color: #67E06F; margin: 3px; display: inline-block;'></div>";
 				break;
 			case 1:
-				newCircles += "<div style = 'height: 6vw; width: 6vw; border-radius: 100%; background-color: #84DFC1; margin: 3px; display: inline-block;'></div>";
+				newCircles += "<div style = 'height: 6vw; width: 6vw; border-radius: 100%; background-color: #6FC6F7; margin: 3px; display: inline-block;'></div>";
 				break;
 			case 2:
-				newCircles += "<div style = 'height: 6vw; width: 6vw; border-radius: 100%; background-color: red; margin: 3px; display: inline-block;'></div>";
+				newCircles += "<div style = 'height: 6vw; width: 6vw; border-radius: 100%; background-color: #ED6B7F; margin: 3px; display: inline-block;'></div>";
 				break;
 			case 3:
-				newCircles += "<div style = 'height: 6vw; width: 6vw; border-radius: 100%; background-color: yellow; margin: 3px; display: inline-block;'></div>";
+				newCircles += "<div style = 'height: 6vw; width: 6vw; border-radius: 100%; background-color: #FADD5F; margin: 3px; display: inline-block;'></div>";
 				break;
 			case 4:
 				newCircles += "<div style = 'height: 6vw; width: 6vw; border-radius: 100%; background-color: black; margin: 3px; display: inline-block;'></div>";
 				break;
 			case 5:
-				newCircles += "<div style = 'height: 6vw; width: 6vw; border-radius: 100%; background-color: purple; margin: 3px; display: inline-block;'></div>";
+				newCircles += "<div style = 'height: 6vw; width: 6vw; border-radius: 100%; background-color: #C866F2; margin: 3px; display: inline-block;'></div>";
 				break;
 		}
 	}
@@ -210,7 +210,7 @@ function printGuess(plArr, black, white) {
 	}
 	if (black + white < 4) {
 		for (i = black + white; i < 4; i++) {
-			newCircles += "<div class = 'clue' style = 'background-color: white; border-color: white;'></div>"	//adds a white square until all the squares add up to 4
+			newCircles += "<div class = 'clue' style = 'background-color: #EBAA79; border-color: white;'></div>"	//adds a white square until all the squares add up to 4
 		}																										//so everything lines up nice.
 	}
 	
