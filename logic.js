@@ -182,22 +182,22 @@ function printGuess(plArr, black, white) {
 	for (i = 0; i < 4; i++) {							//for loop adds a new circle to the string for each element in the player's array.
 		switch (plArr[i]) {			//like above, 0 = green, 1 = blue, etc.
 			case 0:
-				newCircles += "<div style = 'height: 6vw; width: 6vw; border-radius: 100%; background-color: #67E06F; margin: 3px; display: inline-block;'></div>";
+				newCircles += "<div class = 'symbols'></div>";
 				break;
 			case 1:
-				newCircles += "<div style = 'height: 6vw; width: 6vw; border-radius: 100%; background-color: #6FC6F7; margin: 3px; display: inline-block;'></div>";
+				newCircles += "<div class = 'symbols' style = 'background-color: #6FC6F7;'></div>";
 				break;
 			case 2:
-				newCircles += "<div style = 'height: 6vw; width: 6vw; border-radius: 100%; background-color: #ED6B7F; margin: 3px; display: inline-block;'></div>";
+				newCircles += "<div class = 'symbols' style = 'background-color: #ED6B7F;'></div>";
 				break;
 			case 3:
-				newCircles += "<div style = 'height: 6vw; width: 6vw; border-radius: 100%; background-color: #FADD5F; margin: 3px; display: inline-block;'></div>";
+				newCircles += "<div class = 'symbols' style = 'background-color: #FADD5F;'></div>";
 				break;
 			case 4:
-				newCircles += "<div style = 'height: 6vw; width: 6vw; border-radius: 100%; background-color: black; margin: 3px; display: inline-block;'></div>";
+				newCircles += "<div class = 'symbols' style = 'background-color: black;'></div>";
 				break;
 			case 5:
-				newCircles += "<div style = 'height: 6vw; width: 6vw; border-radius: 100%; background-color: #C866F2; margin: 3px; display: inline-block;'></div>";
+				newCircles += "<div class = 'symbols' style = 'background-color: #C866F2;'></div>";
 				break;
 		}
 	}
