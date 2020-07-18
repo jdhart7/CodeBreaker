@@ -163,7 +163,7 @@ function checkAnswer() {		//this function gets the player's guess and places it 
 };
 
 function checkWhite(plArr) {		//function checks how many circles are the correct color. Subtracting by the amount of circles in the correct spot will give us the correct
-	var white = 0;					//hint. The white variable is named for the board game; before I selected orange as a better color for this program.
+	var white = 0;					//hint. The white variable is named for the board game; before I selected white as a better color for this program.
 	for (i = 0; i < 4; i++) {
 		for (j = 0; j < 4; j++) {		//these for loops go through both the CPU's arr and the player's guess array.
 			if (arr[i] == plArr[j]) {	//if the guess and the CPU's color is the same...
@@ -206,7 +206,7 @@ function printGuess(plArr, black, white) {
 		newCircles += "<div class = 'clue' style = 'background-color: black;'></div>";		//adds a new black square to the string for each number in "black"
 	}
 	for (i = 0; i < white; i++) {
-		newCircles += "<div class = 'clue' style = 'background-color: orange;'></div>";		//adds an orange square for each number in "white"
+		newCircles += "<div class = 'clue' style = 'background-color: white;'></div>";		//adds an white square for each number in "white"
 	}
 	if (black + white < 4) {
 		for (i = black + white; i < 4; i++) {
@@ -236,10 +236,9 @@ function checkArrays() {
 		alterCPU();											//calls a function to alter the grey circles at the top of the screen.
 		document.getElementById("btn").disabled = true;		//disable the "submit guess" button so the player can't alter the play field anymore.
 		guesses++;											//count this as the last guess.
-		window.alert("You Win! It took " +guesses+ " guesses to solve.");	//tell the user they won and show how many guesses they made.
-		location.reload();													//reload the screen
+		winner(guesses);
 	} else {
-		var white = checkWhite(plArr) - black;		//"white" stores the amount of orange squares that need to be printed if the guess is incorrect. The variable is named for
+		var white = checkWhite(plArr) - black;		//"white" stores the amount of white squares that need to be printed if the guess is incorrect. The variable is named for
 		guesses++;									//the board game, rather than this because I hadn't selected a color yet. They're subtracted because the checkWhite()
 		//console.log("black: " +black);			//function only determines if there are circles of the same color.
 		//console.log("white: " +white);
@@ -248,3 +247,31 @@ function checkArrays() {
 		printGuess(plArr, black, white);			//print the guess to the game area.
 	};
 };
+
+function winner(guesses) {		//function brings up a popup, tells the user their score, then gives them the option to refresh the page.
+	var modal = document.getElementById("myModal");				//popup div
+	var textStuff = "<center><h1>Congradulations! You Win!</h1>You cracked the code in ";	//variable for the text that goes inside the popup.
+	textStuff += guesses;
+	textStuff += " guesses.<br />"
+	switch (guesses) {			//switch statement gives feedback based on how many guesses it took to crack the code.
+		case 1:
+			textStuff += "You didn't cheat, did you?<br />";
+			break;
+		case 2:
+			textStuff += "Wow! Lucky Guess!<br />";
+			break;
+		case 3: case 4: case 5:
+			textStuff += "Really well done!<br />";
+			break;
+		case 6: case 7: case 8:
+			textStuff += "Not bad!<br />";
+			break;
+		default:
+			textStuff += "Had some trouble, huh? Practice makes perfect!<br />";
+			break;
+	}
+	textStuff += "<button id = 'restartBtn' onClick = 'location.reload();'>Play Again!</button>";
+	textStuff += "<a href = 'https://github.com/jdhart7/CodeBreaker/' target = '_blank' ref = 'noopener nereferrer'><button id = 'codeBtn'>See the Code</button></a></center>";
+	document.getElementById("modal-content").innerHTML += textStuff;
+	modal.style.display = "block";
+}
