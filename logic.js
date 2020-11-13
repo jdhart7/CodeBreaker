@@ -55,89 +55,30 @@ function changeColor(obj) {		//changes the color of the clicked circle in the pl
 };
 
 function alterCPU() {			//changes the grey circles at the top of the screen to show the correct code.
-	
-	switch (arr[0]) {			//switch statement finds the value for the color in the first entry.
-		case 0:
-			document.getElementById("ans1").style.backgroundColor = "#67E06F";	//0 in the array represents green
-			break;
-		case 1:
-			document.getElementById("ans1").style.backgroundColor = "#6FC6F7";	//1 represents blue
-			break;
-		case 2:
-			document.getElementById("ans1").style.backgroundColor = "#ED6B7F";		//and so on
-			break;
-		case 3:
-			document.getElementById("ans1").style.backgroundColor = "#FADD5F";	//and so forth.
-			break;
-		case 4:
-			document.getElementById("ans1").style.backgroundColor = "black";	//ans1 is the first grey circle in the play area, of course.
-			break;
-		case 5:
-			document.getElementById("ans1").style.backgroundColor = "#C866F2";
-			break;
-	}
-	
-	switch (arr[1]) {
-		case 0:
-			document.getElementById("ans2").style.backgroundColor = "#67E06F";	//does the same thing as the first switch statement, but for the second circle.
-			break;
-		case 1:
-			document.getElementById("ans2").style.backgroundColor = "#6FC6F7";
-			break;
-		case 2:
-			document.getElementById("ans2").style.backgroundColor = "#ED6B7F";
-			break;
-		case 3:
-			document.getElementById("ans2").style.backgroundColor = "#FADD5F";
-			break;
-		case 4:
-			document.getElementById("ans2").style.backgroundColor = "black";
-			break;
-		case 5:
-			document.getElementById("ans2").style.backgroundColor = "#C866F2";
-			break;
-	}
-	
-	switch (arr[2]) {
-		case 0:
-			document.getElementById("ans3").style.backgroundColor = "#67E06F";	//I'm sure there's an easier way to do this, but I couldn't figure it out.
-			break;
-		case 1:
-			document.getElementById("ans3").style.backgroundColor = "#6FC6F7";
-			break;
-		case 2:
-			document.getElementById("ans3").style.backgroundColor = "#ED6B7F";
-			break;
-		case 3:
-			document.getElementById("ans3").style.backgroundColor = "#FADD5F";
-			break;
-		case 4:
-			document.getElementById("ans3").style.backgroundColor = "black";
-			break;
-		case 5:
-			document.getElementById("ans3").style.backgroundColor = "#C866F2";
-			break;
-	}
-	
-	switch (arr[3]) {
-		case 0:
-			document.getElementById("ans4").style.backgroundColor = "#67E06F";		//one more time.
-			break;
-		case 1:
-			document.getElementById("ans4").style.backgroundColor = "#6FC6F7";
-			break;
-		case 2:
-			document.getElementById("ans4").style.backgroundColor = "#ED6B7F";
-			break;
-		case 3:
-			document.getElementById("ans4").style.backgroundColor = "#FADD5F";
-			break;
-		case 4:
-			document.getElementById("ans4").style.backgroundColor = "black";
-			break;
-		case 5:
-			document.getElementById("ans4").style.backgroundColor = "#C866F2";
-			break;
+	for (i = 0; i < 4; i++) {
+		var temp = i + 1;
+		var str = 'ans' +temp;
+		console.log(str);
+		switch (arr[i]) {			//switch statement finds the value for the color in the first entry.
+			case 0:
+				document.getElementById(str).style.backgroundColor = "#67E06F";	//0 in the array represents green
+				break;
+			case 1:
+				document.getElementById(str).style.backgroundColor = "#6FC6F7";	//1 represents blue
+				break;
+			case 2:
+				document.getElementById(str).style.backgroundColor = "#ED6B7F";		//and so on
+				break;
+			case 3:
+				document.getElementById(str).style.backgroundColor = "#FADD5F";	//and so forth.
+				break;
+			case 4:
+				document.getElementById(str).style.backgroundColor = "black";	//ans1 is the first grey circle in the play area, of course.
+				break;
+			case 5:
+				document.getElementById(str).style.backgroundColor = "#C866F2";
+				break;
+		}
 	}
 	
 		
